@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+:root {
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  --light-grayish-cyan-background: hsl(180, 52%, 96%);
+  --light-grayish-cyan-filter-tablets: hsl(180, 31%, 95%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--light-grayish-cyan-background);
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Spartan', sans-serif;
+}
+
+
+li {
+  list-style-type: none;
+}
+
+.App {
+  background-color: var(--light-grayish-cyan-background);
+}
+
+.Header {
+  background-image: url(./images/bg-header-mobile.svg);
+  background-color: var(--desaturated-dark-cyan);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  height: 23vh;
+  width: 100vw;
+}
+
+.DisplayJobs {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.JobCard {
+  font-size: 0.75rem;
+  position: relative;
+  background-color: white;
+  margin: 50px 25px;
+  padding: 2rem 1rem 1.5rem 1rem;
+  width: 85%;
+  border-left: 5px solid var(--desaturated-dark-cyan);
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px hsla(180, 8%, 52%, 0.214);
+}
+
+.Filter {
+  background-color: white;
+  margin: 0 1.5em;
+  padding: 1.5rem 1rem;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 5px 10px 15px hsla(180, 8%, 52%, 0.214);
+}
+
+.FilterTag {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: .5rem;
+  font-size: 0.75rem;
+}
+
+.logo {
+  position: absolute;
+  width: 50px;
+  top: -10%;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.company {
+  color: var(--desaturated-dark-cyan);
+  font-size: 0.55rem;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.new {
+  background-color: var(--desaturated-dark-cyan);
+  color: var(--light-grayish-cyan-filter-tablets);
+  border-radius: 50px;
+  padding: .25rem 1em;
+  margin: 0 1rem;
+  font-weight: 700;
+  font-size: .7rem;
+}
+
+.featured {
+  background-color: var(--very-dark-grayish-cyan);
+  color: white;
+  border-radius: 50px;
+  padding: .25rem 1em;
+  font-weight: 700;
+  font-size: .7rem;
+}
+
+.position {
+  font-size: .5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.position h1:hover{
+  cursor: pointer;
+  color: var(--desaturated-dark-cyan)
+}
+
+.info {
+  color: var(--dark-grayish-cyan);
+  font-size: .80rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  margin: 1rem 1rem 0rem 0;
+  color: var(--desaturated-dark-cyan);
+  background-color: var(--light-grayish-cyan-background);
+  padding:0.5em 1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.tag:hover {
+  background-color: var(--desaturated-dark-cyan);
+  color: var(--light-grayish-cyan-background);
+}
+
+.filter-tags {
+  display: flex;
+}
+
+.filter-tags ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  border-bottom: 2px solid var(--desaturated-dark-cyan);
+  color: var(--desaturated-dark-cyan);
+}
+
+.close-tag {
+  background: var(--desaturated-dark-cyan);
+  border: none;
+  padding: .35em;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.close-tag:hover {
+  background: var(--very-dark-grayish-cyan);
+}
+
+.tag-label {
+  color: var(--desaturated-dark-cyan);
+  background-color: var(--light-grayish-cyan-background);
+  padding: 0.5em 1em;
+  border-radius: 5px 0 0 5px;
+}
+
+
+@media only screen and (min-width: 750px) {
+  
+  hr {
+    display: none;
+  }
+
+  .display-cards {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Filter {
+    width: 100%;
+    margin-left: 1.5rem
+  }
+
+  .JobCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 50px 25px;
+  }
+
+  .logo {
+    margin: 0 1rem;
+    position: relative;
+    width: 85px;
+  }
+
+  .info {
+    margin: 0;
+  }
+}
